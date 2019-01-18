@@ -96,19 +96,137 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+/* Base styles - footer styles */
+
+/* course code didnt add this */
+html,
+body{
+  margin: 10px;
+}
+
+header,
+footer{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-flow: row wrap;
+}
 
 
+  /* Header styles */
+
+header .content-wrapper{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-flow: row wrap;
+width: 100%
+}
+
+/* header .content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}for desktop version thois lays the full header flat */
 
 
+header nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
 
+}
 
+header nav ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
 
+}
 
+ header li{
+  padding:10px;
+}
 
+/* Mobile Styles Homepage */
 
+/* ------------------------hero section-------------------------- */
+.hero-area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    flex-flow: row wrap;
+}
 
+/* ---------------------form section--------------------------- */
+aside{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
 
+}
 
+/* .form{
+  display: flex;
+  flex-flow: column wrap;
+this puts the download itineray button below email section but not on main code
+} */
+/* -------------------FEATURES----------------------------------------------- */
+
+.features{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.features-items{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.features-items article{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width:200px;
+  padding:15px;
+}
+  .reviews{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+
+}
+
+/* ------------------footer---------------------- */
+footer .social-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .social-icons p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ==========================================================================
+   About Page
+   ========================================================================== */
+.
 
 
 
