@@ -99,36 +99,53 @@ textarea {
 /* Base styles - footer styles */
 
 /* course code didnt add this */
-html,
+/* html,
 body{
-  margin: 10px;
-}
+  margin: 10px; */
 
-header,
-footer{
+  /* Here's one more thing to be aware of as a professional web developer. If you
+  don't assign a class with margin styles to a paragraph, your browser will
+  automatically give it a default margin. Sometimes, that works out just fine.
+  In this case, however, it can cause your spacing to look a little wonky in
+  certain parts of your Unplugged design. That includes the header, features
+  section, and the contact section of your footer.
+
+  Pro-tip: if something ever looks "off" to you, such as the amount of margin or
+  padding around an element, you can inspect it in Chrome's DevTools to check
+  whether the browser might be applying a default */
+
+header, footer{
  display: flex;
  justify-content: center;
  align-items: center;
  flex-flow: row wrap;
+ padding:15px 0px;
 }
 
+.content-wrapper{
+  width:90%;
+  /* margin: 50px 0; measure**** */
+}
 
   /* Header styles */
+
+  header {
+    padding: 15px 0;
+  }
 
 header .content-wrapper{
 display: flex;
 justify-content: center;
 align-items: center;
 flex-flow: row wrap;
-width: 100%
+margin: 0;
 }
 
-/* header .content-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-}for desktop version thois lays the full header flat */
+.header-divider{
+  width:100%;
+  height: 1px;
+  margin: 10px 0 20px 0;
+}
 
 
 header nav{
@@ -136,6 +153,8 @@ header nav{
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
+  width:60%;
+  /* set to 60% as we want this space to equal the image above it */
 
 }
 
@@ -143,22 +162,24 @@ header nav ul{
   list-style: none;
   display: flex;
   justify-content: space-around;
+  width: 100%;
+  /* we want the ul (which containd both the li) to be the same width as the nav */
 
 }
 
- header li{
-  padding:10px;
-}
 
 /* Mobile Styles Homepage */
+
+
 
 /* ------------------------hero section-------------------------- */
 .hero-area{
   display: flex;
   justify-content: center;
   align-items: center;
-    flex-flow: row wrap;
+  flex-flow: row wrap;
 }
+
 
 /* ---------------------form section--------------------------- */
 aside{
@@ -166,15 +187,12 @@ aside{
   flex-flow: row wrap;
   justify-content: center;
   align-content: center;
-
 }
 
-/* .form{
-  display: flex;
-  flex-flow: column wrap;
-this puts the download itineray button below email section but not on main code
-} */
+
 /* -------------------FEATURES----------------------------------------------- */
+
+
 
 .features{
   display: flex;
@@ -183,7 +201,12 @@ this puts the download itineray button below email section but not on main code
   align-items: center;
 }
 
-.features-items{
+.features h2 {
+  margin-bottom: 60px;
+}
+
+
+.features .features-items{
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -192,24 +215,57 @@ this puts the download itineray button below email section but not on main code
 }
 
 .features-items article{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width:200px;
-  padding:15px;
+  width:55%;
+  margin: 30px 0;
 }
+
+.features p {
+  margin: 0;
+}
+
+
+
+
   .reviews{
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
-
 }
 
+.reviews h2 {
+  margin-bottom: 40px;
+}
+
+.reviews h3 {
+  width: 55%;
+  margin: 20px 0;
+}
 /* ------------------footer---------------------- */
-footer .social-icons {
+
+footer {
+  flex-direction: column;
+}
+
+
+footer .content-wrapper {
   display: flex;
-  justify-content: space-around;
+  flex-flow: column wrap;
+  justify-content: center;
   align-items: center;
+  }
+
+  footer .content-wrapper {
+    width: 55%;
+    margin: 50px 0;
+  }
+
+  footer .social-icons  {
+    display: flex;
+    flex-flow: row, wrap;
+    justify-content: space-around;
+    align-items: center;
+    }
+
 }
 
 footer .social-icons p {
@@ -217,13 +273,17 @@ footer .social-icons p {
   justify-content: center;
   align-items: center;
 }
-.footer .social {
+
+footer .social {
   display: flex;
+  flex-flow: column wrap;
   justify-content: space-between;
   align-items: center;
 }
 
-
+footer .copyright {
+  margin: 20px 0;
+}
 /* ==========================================================================
    About Page
    ========================================================================== */
@@ -243,6 +303,9 @@ footer .social-icons p {
 
   }
 
+  .contact-content p {
+    margin: 0;
+  }
   /* ==========================================================================
      FAQ Page
      ========================================================================== */
@@ -259,7 +322,18 @@ footer .social-icons p {
        justify-content: center;
        align-items: center;
        flex-flow: row wrap;
+
      }
+
+     .faq h2 {
+       margin-bottom: 40px;
+     }
+
+     .faq-content {
+       margin-bottom: 50px;
+     }
+
+     /* breakpoints 768 and 2000px */
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -346,16 +420,14 @@ footer .social-icons p {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 768px) {
+    /* tablet styles here */
 }
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+@media only screen and (min-width: 1200px) {
+    /* desktop styles here */
 }
+
 
 /* ==========================================================================
    Print styles.
