@@ -493,7 +493,7 @@ position inside the line's area. */
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
-      /* align-items: baseline; */
+
 
 
     }
@@ -605,17 +605,72 @@ parent container */
 @media only screen and (min-width: 1200px) {
     /* desktop styles here */
 
-
-
-
-
-
-    /* .features-items article{
-    width:30%; */
-    }
+.content-wrapper{
+  max-width:960px;
+  margin: 100px;
 }
 
+/* hero area */
+.hero-area h1{
+  width:60%;
+}
 
+/* aside */
+aside .content-wrapper {
+      justify-content:space-around;
+  }
+
+  /* not sure why you need this */
+
+  aside .content-wrapper .form-description,
+  aside .content-wrapper .form {
+      width:30%;
+  }
+
+  /* Features */
+   .features h2 {
+       width: 70%;
+   }
+
+   .features article {
+       flex-basis: 33%;
+   }
+
+
+/* Reviews */
+  .reviews article div {
+      width: 40%;
+  }
+/* when you measure a div, use the grid, it should fit the box perfectly unless
+padding or margin has been set */
+
+  /* ==========================================================================
+     About Page
+     ========================================================================== */
+      .mission h2,
+      .contact-section .content-wrapper h2 {
+          width: 100%;
+      }
+
+      .contact-section .content-wrapper h2 {
+          margin-bottom: 40px;
+      }
+
+
+
+
+/* ==========================================================================
+   FAQ Page
+   ========================================================================== */
+    .faq h2 {
+        width: 100%;
+    }
+
+    .faq-content {
+        flex-basis:40%;
+    }
+
+}
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
