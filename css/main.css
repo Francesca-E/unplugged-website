@@ -124,15 +124,20 @@ header, footer{
 
 .content-wrapper{
   width:90%;
-  /* margin: 50px 0; measure**** */
+  margin: 50px 0;
 }
+
+/* the 50px is based on the distance between most sectons and the border
+on mobile site.  It does not relate to the header */
 
   /* Header styles */
 
   header {
     padding: 15px 0;
   }
-
+/* this is the distancr between the edge and header */
+/* to override the 50px we set in the earlier content wrapper for the
+header section, we set the margin to 0 px here */
 header .content-wrapper{
 display: flex;
 justify-content: center;
@@ -145,6 +150,8 @@ margin: 0;
   width:100%;
   height: 1px;
   margin: 10px 0 20px 0;
+
+
 }
 
 
@@ -154,6 +161,7 @@ header nav{
   align-items: center;
   flex-flow: row wrap;
   width:60%;
+
   /* set to 60% as we want this space to equal the image above it */
 
 }
@@ -189,7 +197,13 @@ aside{
   align-content: center;
 }
 
+.form{
 
+display: flex;
+flex-flow: column wrap;
+justify-content: center;
+align-content: center;
+}
 /* -------------------FEATURES----------------------------------------------- */
 
 
@@ -198,7 +212,7 @@ aside{
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .features h2 {
@@ -223,15 +237,15 @@ aside{
   margin: 0;
 }
 
-
-
-
-  .reviews{
+.reviews {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
 }
 
+
+
+}
 .reviews h2 {
   margin-bottom: 40px;
 }
@@ -246,22 +260,21 @@ footer {
   flex-direction: column;
 }
 
-
-footer .content-wrapper {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  }
+footer p {
+  margin: 0;
+}
 
   footer .content-wrapper {
     width: 55%;
     margin: 50px 0;
   }
 
+  footer .contact {
+    margin-bottom: 50px;
+  }
+
   footer .social-icons  {
     display: flex;
-    flex-flow: row, wrap;
     justify-content: space-around;
     align-items: center;
     }
@@ -276,7 +289,6 @@ footer .social-icons p {
 
 footer .social {
   display: flex;
-  flex-flow: column wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -310,26 +322,28 @@ footer .copyright {
      FAQ Page
      ========================================================================== */
 
-     .faq {
+     .faqs {
        display: flex;
        justify-content: center;
        align-items: center;
        flex-flow: row wrap;
      }
 
-     .faq .content-wrapper {
+     .faqs .content-wrapper {
+      margin: 50px 0 0 0;
        display: flex;
        justify-content: center;
-       align-items: center;
+       align-items: flex-start;
        flex-flow: row wrap;
 
      }
 
-     .faq h2 {
+     .faqs h1 {
        margin-bottom: 40px;
+       /* width:90%; */
      }
 
-     .faq-content {
+     .faqs-content {
        margin-bottom: 50px;
      }
 
@@ -419,13 +433,186 @@ footer .copyright {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+   /* header (justify-content)
+   header content-wrapper (justify-content)
+   header nav ul (justify-content)
+)
+
+   footer-content (display: flex, justify-content, and align-items) */
+
+/* align-content can change a line's height for row direction or width for column when
+it's value is stretch, or add empty space between or around the lines for space-between ,
+space-around , flex-start , flex-end values . align-items can change items height or
+position inside the line's area. */
+
+
+
 
 @media only screen and (min-width: 768px) {
+
     /* tablet styles here */
+
+    /* General styles */
+    .content-wrapper {
+      max-width: 640px;
+      margin: 100px 0;
+    }
+
+
+    /* Header */
+    header {
+      justify-content: space-around;
+    }
+    /* the above doesnt change if you set it to center */
+
+    header .content-wrapper {
+      width: 100%;
+      justify-content: space-between;
+    }
+    /* sets elements on either side of the 100% */
+
+    header nav {
+      width: 20%;
+    }
+
+    header nav ul {
+      justify-content: space-between;
+    }
+
+    .header-divider {
+      display: none;
+    }
+
+    /* Hero Area */
+
+    /* Aside */
+
+
+    aside .content-wrapper{
+      margin: 50px 0;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      /* align-items: baseline; */
+
+
+    }
+
+    aside .content-wrapper .form-description,
+    aside .content-wrapper .form {
+      width: 35%;
+      margin: 0;
+    }
+
+  /* Features */
+  .features article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    flex-basis: 50%;
+  }
+
+
+  .features .features-item-description {
+    width: 50%;
+  }
+
+  /* Reviews */
+
+
+  .reviews article {
+  display: flex;
+  justify-content: space-between;
+  }
+/* the image also goes in the article so the the space between separates the img
+and the div with the lettering in */
+.reviews article div {
+  width: 49%;
+}
+
+/* footer */
+
+footer .content-wrapper {
+  width: 65%;
+  margin: 100px 0;
+}
+
+ .footer-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .contact {
+  margin-bottom: 0;
+}
+
+footer .copyright {
+  width: 100%;
+}
+
+
+
+/* ==========================================================================
+ About Page
+ ====================================================================*/
+
+
+
+
+.mission-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mission-content p {
+flex-basis:40%;
+}
+
+/* widths are set on the element, flex box properties are set on
+parent container */
+
+
+.contact-content{
+  flex-basis: 40%
+}
+
+.contact-section h2 {
+  width: 80%;
+}
+
+/* ==========================================================================
+ FAQ Page
+ ========================================================================== */
+
+
+.faq .content-wrapper {
+  justify-content: space-between;
+}
+.faqs-content{
+  flex-basis: 40%;
+}
+
+.faq h2 {
+  width: 100%;
+}
+
+
 }
 
 @media only screen and (min-width: 1200px) {
     /* desktop styles here */
+
+
+
+
+
+
+    /* .features-items article{
+    width:30%; */
+    }
 }
 
 
