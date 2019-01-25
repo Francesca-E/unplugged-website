@@ -351,10 +351,11 @@ background: #527158;
   justify-content: center;
 }
 
-.features .fontawesome-icon figure{
-  width:20px;
-}
 
+.features i {
+	font-size: 3.75em;
+        margin-bottom: 40px;
+}
 
 .features p {
   padding-top: 15px;
