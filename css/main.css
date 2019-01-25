@@ -421,6 +421,14 @@ footer .social {
   margin-top: 50px;
 }
 
+footer .social-icons i{
+  border: 12px solid #527158;
+  border-radius: 50%;
+  background: #527158;
+}
+
+
+
 footer .copyright {
   margin: 20px 0;
 }
