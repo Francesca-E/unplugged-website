@@ -482,8 +482,29 @@ footer .contact {
        justify-content: center;
        align-items: flex-start;
        flex-flow: row wrap;
-
      }
+
+.map-container{
+  position:relative;
+  padding-bottom: 75%;
+  height:0;
+  overflow:hidden;
+}
+
+/* we want the ratio of the height to width to stay the same (ie ig the width increases
+  the height increases proportionally).therefor divide height by width to set padding.
+the padding will increase or decrease to give the map the correct aspect ration within
+the div
+height is set to zero as the padding sets the size of the iframe
+this is in the course notes but not in other examples i found online */
+.map-container iframe{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+}
 
      .faqs h1 {
        margin-bottom: 40px;
@@ -804,6 +825,15 @@ width:50%;
 .faqs h2 {
   width: 100%;
 }
+
+  .map-container{
+    position:relative;
+    padding-bottom: 47%;
+    height:0;
+    overflow:hidden;
+}
+
+}
 @media only screen and (min-width: 1200px) {
     /* desktop styles here */
 
@@ -870,6 +900,13 @@ padding or margin has been set */
 
     .faq-content {
         flex-basis:35%;
+    }
+
+    .map-container{
+      position:relative;
+      padding-bottom: 37%;
+      height:0;
+      overflow:hidden;
     }
 
 }
