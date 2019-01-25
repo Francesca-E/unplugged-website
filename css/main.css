@@ -55,14 +55,14 @@ hr {
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
 
-audio,
+/* audio,
 canvas,
 iframe,
 img,
 svg,
 video {
-    vertical-align: middle;
-}
+    vertical-align: middle; */
+
 
 /*
  * Remove default fieldset styles.
@@ -97,12 +97,14 @@ textarea {
    ========================================================================== */
 /* General Styles */
 
+
+
  html {
 	font-size: 16px;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif, Helvetica, Arial, sans-serif;
   font-size: 1em;
 }
 
@@ -113,7 +115,6 @@ ul, ol {
      font-size: 1em;
      line-height: 28pt;
      text-transform: uppercase;
-
 }
 
 a {
@@ -148,7 +149,10 @@ h4 {
     color: #e2e3ed;
 }
 
+
+
 p {
+  margin-top: 0;
 line-height: 18pt;
 font-family: 'Poppins', sans-serif;
 font-weight: normal;
@@ -157,11 +161,11 @@ font-style: .875em;
 }
 
 img {
-
+  width:100%;
 }
 
 figure {
-
+margin: 0;
 }
 
 address {
@@ -228,8 +232,13 @@ header section, we set the margin to 0 px here */
     margin: 0;
   }
 
-
-
+  header figure {
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: row wrap;
+  }
 .header-divider{
   width:100%;
   height: 1px;
@@ -267,11 +276,17 @@ header nav ul{
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background: url("../img/bridge.jpg");
+  background-size: cover;
+  background-repeat: no-repeat #333;;
+  background-position: center;
 }
 
 .hero-area h2{
   width: 84%;
+  padding-bottom: 150px;
 }
+
 /* --------------------- section--------------------------- */
 aside{
   display: flex;
@@ -307,6 +322,11 @@ background: #527158;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  background: url("../img/campfire.jpg");
+  background-size: cover;
+  background-repeat: no-repeat #333;;
+  background-position: center;
+  width:100%;
 }
 
 .features h2 {
@@ -325,12 +345,23 @@ background: #527158;
 .features-items article{
   width:70%;
   margin: 30px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
+.features .fontawesome-icon figure{
+  width:20px;
+}
+
+
 .features p {
+  padding-top: 15px;
   margin: 0;
   text-align: center;
 }
+
 
 .reviews {
     display: flex;
@@ -339,7 +370,7 @@ background: #527158;
     background: #2a423a;
 }
 
-}
+
 .reviews h2 {
   margin-bottom: 40px;
   width:90%;
@@ -370,6 +401,7 @@ footer p {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width:201px;
     }
 
 }
@@ -569,14 +601,15 @@ position inside the line's area. */
 
     /* General styles */
     .content-wrapper {
-      max-width: 640px;
+      max-width: 83%;
       margin: 100px 0;
     }
 
 
     /* Header */
     header {
-      justify-content: space-around;
+      /* justify-content: space-between; */
+      header:100%;
     }
 
     .header-divider {
@@ -587,11 +620,20 @@ position inside the line's area. */
       width: 100%;
       display:flex;
       justify-content: space-between;
+      align-items: center;
     }
     /* sets elements on either side of the 100% */
 
     header  nav {
-  width: 20%;
+   width: 30%;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+    }
+
+    header .figure{
+      width:80%;
+      display:flex;
     }
 
     header nav ul {
@@ -623,8 +665,8 @@ position inside the line's area. */
   /* Features */
   .features article {
     display: flex;
-    justify-content: center;
-    align-items: baseline;
+    justify-content: space-between;
+    align-items: center;
     flex-flow: column wrap;
     flex-basis: 50%;
   }
@@ -637,14 +679,30 @@ position inside the line's area. */
   /* Reviews */
 
 
-  .reviews .review-info {
+
+
+
+
+  .reviews .review-info article{
+  width:100%;
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   }
 /* the image also goes in the article so the the space between separates the img
 and the div with the lettering in */
-.reviews article div {
+.reviews article div,
+.reviews article figure {
   width: 49%;
+}
+
+
+.reviews article div p{
+word-wrap: break-word;
+hyphens: auto;
+}
+.reviews article img{
+  vertical-align:top;
 }
 
 .reviews h2{
@@ -676,6 +734,8 @@ footer .copyright {
 footer .social {
   margin-top: 0px;
 }
+
+
 
 
 /* ==========================================================================
@@ -782,7 +842,7 @@ aside .content-wrapper {
 
 /* Reviews */
   .reviews article div {
-      width: 40%;
+      width: 48%;
   }
 /* when you measure a div, use the grid, it should fit the box perfectly unless
 padding or margin has been set */
